@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RettioAPI.Contexts;
 
@@ -10,9 +11,11 @@ using RettioAPI.Contexts;
 namespace RettioApi.Migrations
 {
     [DbContext(typeof(RettioContext))]
-    partial class RettioContextModelSnapshot : ModelSnapshot
+    [Migration("20241219192702_Version1.2")]
+    partial class Version12
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");

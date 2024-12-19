@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RettioApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a1a4871cee7641755e907203ed1835d16c1e814")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+895777afcd6a9d0734b7ceda68f84bb081c3d9ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("RettioApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RettioApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
