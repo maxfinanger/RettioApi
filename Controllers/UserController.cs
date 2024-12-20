@@ -153,7 +153,8 @@ public class UserController : ControllerBase
                 UserId = user.Id,
                 Username = user.Username,
                 FirstName = user.FirstName,
-                LastName = user.LastName
+                LastName = user.LastName,
+                PhoneNumber = user.PhoneNumber
             });
         }
         catch
