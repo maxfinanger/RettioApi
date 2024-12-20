@@ -48,11 +48,11 @@ public class AppointmentController : ControllerBase
 
     // Create a new appointment
     [HttpPost]
-    public async Task<ActionResult<User>> Post(User newAppointment)
+    public async Task<ActionResult<Appointment>> Post(Appointment newAppointment)
     {
         try
         {
-            context.User.Add(newAppointment);
+            context.Appointment.Add(newAppointment);
             await context.SaveChangesAsync();
             return CreatedAtAction(nameof(Get), new { id = newAppointment.Id }, newAppointment);
         }
