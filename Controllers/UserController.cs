@@ -44,6 +44,21 @@ public class UserController : ControllerBase
         }
     }
 
+    // Get a single user by username
+    [HttpGet("by-username/{username}")]
+    public async Task<ActionResult<User>> GetByUsername(string username)
+    {
+        try 
+        {
+            var user = await context.User.FirstOrDefaultAsync(u => u.Username == username);
+            return user != null ? Ok(user) : NotFound();
+        }
+        catch 
+        {
+            return StatusCode(500);
+        }
+    }
+
 
     // Create a new user
     [HttpPost]
@@ -112,4 +127,39 @@ public class UserController : ControllerBase
     {
         return context.User.Any(e => e.Id == id);
     }
+
+    [HttpPost("login")]
+    public async Task<ActionResult> Login([FromBody] LoginRequest loginRequest)
+    {
+        try
+        {
+            // Check if the user exists
+            var user = await context.User.FirstOrDefaultAsync(u => u.Username == loginRequest.Username);
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            // Validate the password
+            if (user.Password != loginRequest.Password) // For production, store hashed passwords!
+            {
+                return Unauthorized("Invalid password");
+            }
+
+            // Generate a success response (e.g., token-based authentication)
+            return Ok(new
+            {
+                Message = "Login successful",
+                UserId = user.Id,
+                Username = user.Username,
+                FirstName = user.FirstName,
+                LastName = user.LastName
+            });
+        }
+        catch
+        {
+            return StatusCode(500, "Internal server error");
+        }
+    }
+
 }

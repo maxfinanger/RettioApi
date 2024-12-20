@@ -4,8 +4,8 @@ public interface IAppointment
 {
     int Id { get; set; }
     string Category { get; set; }
-    DateTime Date { get; set; }
-    DateTime Time { get; set; }
+    string Date { get; set; }
+    string Time { get; set; }
     int Price { get; set; }
     int UserId { get; set; }
 }
