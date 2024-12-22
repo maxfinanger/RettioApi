@@ -3647,19 +3647,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/maxfinanger/.nuget/packages/": {}
+    "/Users/hermansorfang/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/maxfinanger/Documents/GitHub/Business-Boys/RettioApi/RettioApi.csproj",
+      "projectUniqueName": "/Users/hermansorfang/Documents/GitHub/RettioApi/RettioApi.csproj",
       "projectName": "RettioApi",
-      "projectPath": "/Users/maxfinanger/Documents/GitHub/Business-Boys/RettioApi/RettioApi.csproj",
-      "packagesPath": "/Users/maxfinanger/.nuget/packages/",
-      "outputPath": "/Users/maxfinanger/Documents/GitHub/Business-Boys/RettioApi/obj/",
+      "projectPath": "/Users/hermansorfang/Documents/GitHub/RettioApi/RettioApi.csproj",
+      "packagesPath": "/Users/hermansorfang/.nuget/packages/",
+      "outputPath": "/Users/hermansorfang/Documents/GitHub/RettioApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/maxfinanger/.nuget/NuGet/NuGet.Config"
+        "/Users/hermansorfang/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3682,7 +3682,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -3718,6 +3719,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.11, 8.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[8.0.11, 8.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.11, 8.0.11]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -3726,7 +3741,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.206/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

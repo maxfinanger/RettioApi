@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "SWUkXoB7fqcXoFLcmdY5bnJOJ9NwM18b2S1qYfTwN1A=",
+  "Hash": "My4umare3OiRXS4KU/gFmFnrg64tsChueNWcSKExuoU=",
   "Source": "RettioApi",
   "BasePath": "_content/RettioApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
