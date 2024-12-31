@@ -8,4 +8,5 @@ public class Appointment
     public required string Time { get; set; }
     public required int Price { get; set; }
     public required int UserId { get; set; }
+    public required string VideoLink {get; set;}
 }
