@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RettioApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37687e518d09bc34d41eb82d2839a197307db9e4")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc1996bbfce2dc199f233128fde90a1cc3aa4b68")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("RettioApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RettioApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
