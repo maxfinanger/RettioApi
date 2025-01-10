@@ -14,7 +14,6 @@ public class UserController : ControllerBase
         context = _context;
     }
 
-    // Get all users
     [HttpGet]
     public async Task<ActionResult<List<User>>> Get()
     {
@@ -29,7 +28,6 @@ public class UserController : ControllerBase
         }
     }
 
-    // Get a single user by ID
     [HttpGet("{id}")]
     public async Task<ActionResult<User>> Get(int id)
     {
@@ -44,7 +42,6 @@ public class UserController : ControllerBase
         }
     }
 
-    // Get a single user by username
     [HttpGet("by-username/{username}")]
     public async Task<ActionResult<User>> GetByUsername(string username)
     {
@@ -59,8 +56,6 @@ public class UserController : ControllerBase
         }
     }
 
-
-    // Create a new user
     [HttpPost]
     public async Task<ActionResult<User>> Post(User newUser)
     {
@@ -76,7 +71,6 @@ public class UserController : ControllerBase
         }
     }
 
-    // Update an existing user
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, User updatedUser)
     {
@@ -106,7 +100,6 @@ public class UserController : ControllerBase
         return NoContent();
     }
 
-    // Delete an existing user
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
@@ -122,7 +115,6 @@ public class UserController : ControllerBase
         return NoContent();
     }
 
-    // Check if a driver exists
     private bool UserExists(int id)
     {
         return context.User.Any(e => e.Id == id);
@@ -133,20 +125,17 @@ public class UserController : ControllerBase
     {
         try
         {
-            // Check if the user exists
             var user = await context.User.FirstOrDefaultAsync(u => u.Username == loginRequest.Username);
             if (user == null)
             {
                 return NotFound("User not found");
             }
 
-            // Validate the password
-            if (user.Password != loginRequest.Password) // For production, store hashed passwords!
+            if (user.Password != loginRequest.Password)
             {
                 return Unauthorized("Invalid password");
             }
 
-            // Generate a success response (e.g., token-based authentication)
             return Ok(new
             {
                 Message = "Login successful",
@@ -162,5 +151,5 @@ public class UserController : ControllerBase
             return StatusCode(500, "Internal server error");
         }
     }
-
 }
+
